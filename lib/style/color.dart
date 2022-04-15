@@ -11,4 +11,10 @@ class ColorX {
   static int transparentGrey = 0xffBABABA;
   static int buttonTextColor = 0xff545151;
   static int registerButtonColor = 0xffF3F3F3;
+  static int forgetButtonColor = 0xff2D2626;
+  static int btnColor = 0xffECE9EC;
+  static int singUpTextColor = 0xff616161;
+  static int statusColor = 0xffAEB1C1;
+  static int orange = 0xffDD8560;
+  static int blue= 0xff00A8E1;
 }

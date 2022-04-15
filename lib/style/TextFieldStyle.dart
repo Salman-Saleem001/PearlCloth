@@ -5,6 +5,7 @@ InputDecoration getOutlineBorderDecoration({
   int? color = 0xff6342E8,
 }) {
   return InputDecoration(
+    contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 19),
     filled: true,
     fillColor: Color(color!),
     hintText: hintText,
@@ -15,7 +16,13 @@ InputDecoration getOutlineBorderDecoration({
       fontSize: 15,
       fontWeight: FontWeight.w500,
     ),
-    border: InputBorder.none,
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15),
+      borderSide: BorderSide(
+        width: 0,
+        style: BorderStyle.none,
+      ),
+    ),
     errorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),
       borderSide: BorderSide(
