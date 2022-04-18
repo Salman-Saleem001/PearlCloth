@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../style/color.dart';
@@ -23,7 +22,7 @@ Drawer getMenuDrawer(context) {
                   width: 90,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Text(
@@ -34,7 +33,7 @@ Drawer getMenuDrawer(context) {
                   color: Color(ColorX.sfUiBlack),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
               GestureDetector(
@@ -59,7 +58,7 @@ Drawer getMenuDrawer(context) {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(top: 6),
+                padding: const EdgeInsets.only(top: 6),
                 child: getLogOutButton(),
               ),
             ],
