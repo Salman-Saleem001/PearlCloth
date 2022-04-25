@@ -61,7 +61,9 @@ class BuyProductScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
                               icon: Icon(
                                 Icons.arrow_back,
                                 color: Color(ColorX.sfUiBlack),

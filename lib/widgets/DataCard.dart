@@ -12,32 +12,41 @@ class DataCard extends StatefulWidget {
 
 class _DataCardState extends State<DataCard> {
   bool check = false;
+  String image =
+      'https://brumano.b-cdn.net/wp-content/uploads/2018/12/Royal-Blue-Casual-Check-Shirt-1-min.jpg';
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 270,
-      width: 150,
+      height: MediaQuery.of(context).size.height / 4,
+      width: MediaQuery.of(context).size.width / 3,
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.network(
-            'https://brumano.b-cdn.net/wp-content/uploads/2018/12/Royal-Blue-Casual-Check-Shirt-1-min.jpg',
-            height: 125,
-            width: 125,
-            fit: BoxFit.contain,
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/BuyProductScreen');
+              },
+              child: Image.network(
+                'https://brumano.b-cdn.net/wp-content/uploads/2018/12/Royal-Blue-Casual-Check-Shirt-1-min.jpg',
+                fit: BoxFit.contain,
+              ),
+            ),
           ),
           SizedBox(
-            height: 20,
+            height: MediaQuery.of(context).size.height / 80,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'C02 - Cable',
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -45,10 +54,11 @@ class _DataCardState extends State<DataCard> {
                     ),
                   ),
                   SizedBox(
-                    height: 4,
+                    height: MediaQuery.of(context).size.height / 180,
                   ),
                   Text(
                     'USD 25',
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 12,
@@ -59,7 +69,9 @@ class _DataCardState extends State<DataCard> {
               ),
               IconButton(
                 iconSize: 16,
-                splashRadius: 20,
+                splashRadius: 16,
+                padding: EdgeInsets.only(right: 8),
+                constraints: BoxConstraints(maxWidth: 40, maxHeight: 30),
                 onPressed: () {
                   setState(() {
                     check = !check;

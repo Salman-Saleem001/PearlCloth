@@ -5,7 +5,9 @@ class ColorX {
   static int grey = 0xff666161;
   static int transparent = 0xffF3F3F3;
   static int lightGrey = 0xff555252;
+  static int greyLight = 0xffF6F6F6;
   static int loginHead = 0xff464444;
+  static int searchGrey = 0xffBABABA;
   static int sfUiBlack = 0xff0A0C0B;
   static int greyScale = 0xff555555;
   static int transparentGrey = 0xffBABABA;
@@ -18,4 +20,6 @@ class ColorX {
   static int orange = 0xffDD8560;
   static int blue = 0xff00A8E1;
   static int shareButton = 0xffEFEFF3;
+  static int accent = 0xffFFC120;
+  static int darkGrey = 0xff7F7F7F;
 }

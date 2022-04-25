@@ -74,7 +74,9 @@ class LoginScreen extends StatelessWidget {
                 color: Color(ColorX.pink),
                 shape: getButtonStyle(),
                 padding: EdgeInsets.symmetric(vertical: 16),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/HomeScreen');
+                },
                 child: getButtonText(name: 'Sign in', color: ColorX.white),
               ),
               SizedBox(
@@ -112,7 +114,9 @@ class LoginScreen extends StatelessWidget {
               ),
               Center(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/SignUpScreen');
+                  },
                   child: Text(
                     'Don\'t have any account?\n               Sign Up',
                     style: TextStyle(

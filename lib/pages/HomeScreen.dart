@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               Row(
                 children: [
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       _scaffoldKey.currentState?.openDrawer();
                     },
                     child: ClipOval(
@@ -69,7 +69,9 @@ class HomeScreen extends StatelessWidget {
                       minHeight: 0,
                       minWidth: 0,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/SearchScreen');
+                    },
                     icon: Icon(
                       Icons.search,
                       color: Color(ColorX.primaryBlack),
@@ -98,7 +100,9 @@ class HomeScreen extends StatelessWidget {
                 child: ListView(
                   children: [
                     for (int i = 0; i < 10; i++)
-                      Container(height: 300, child: HomeScreenData()),
+                      Container(
+                          height: MediaQuery.of(context).size.height / 3.4,
+                          child: HomeScreenData()),
                   ],
                 ),
               ),
